@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main.container {
+  background-image: url(/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 1px;
+}
+
+form {
+  width: 30vw;
+  height: 70vh;
+  margin: 0 auto;
+  margin-top: 10vh;
+  background-color: #51123f7d;
+  padding-top: 80px;
+  backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: inset 0px 0px 10px 10px #450f36;
+}
+form h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 50px;
+  background-color: #51123f7d;
+  box-shadow: inset 0px 0px 10px 10px #450f36;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom: 0;
+  backdrop-filter: blur(3.5px);
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -70px;
+  left: 40%;
+}
+.fa-users {
+  color: white;
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+input {
+  font-family: "Font Awesome 5 Free", "Roboto";
+  font-weight: 700;
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  display: block;
+  border-radius: 15px;
+  border: 2px solid#450f36;
+  background-color: transparent;
+  color: white;
+}
+::placeholder {
+  color: #ffffff;
+  letter-spacing: 5px;
+}
+.login-button {
+  display: flex;
+  justify-content: center;
+}
+
+.login-button a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #e875c8;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.login-button a:hover {
+  color: #9d237b;
+  background: #e875c8;
+  box-shadow: 0 0 10px #e875c8, 0 0 40px #e875c8, 0 0 80px #e875c8;
+  transition-delay: 1s;
+}
+
+.login-button a span {
+  position: absolute;
+  display: block;
+}
+
+.login-button a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e875c8);
+}
+.login-button a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.login-button a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #e875c8);
+}
+.login-button a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.login-button a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #e875c8);
+}
+.login-button a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.login-button a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #e875c8);
+}
+.login-button a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+label {
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: start;
+  margin-left: 20px;
+}
+label input {
+  width: 20px;
+  margin: 0;
+  margin-right: 20px;
+}
+label a {
+  text-decoration: none;
+
+  color: white;
+  margin-left: 250px;
+}
+label a:hover {
+  color: #e875c8;
+}
+
+.bottom-div {
+  display: flex;
+
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.inside {
+  width: 50px;
+  height: 50px;
+  background-color: #450f3652;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 10px 5px #9d237b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inside .fa {
+  color: #b63892;
+  font-size: 30px;
+  transition: all 0.35s ease-in-out;
+}
+
+.inside .fa:hover {
+  text-shadow: 0 0 10px #e875c8, 0 0 40px #e875c8, 0 0 80px #e875c8;
+  transform: scale(1.5);
+}
+.bottom-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.bottom-links a:hover {
+  color: #e875c8;
+}
+
+.new-acc a,
+p {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.new-acc a:hover {
+  color: #e875c8;
+}
+.new-acc p {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #b63892;
+}
