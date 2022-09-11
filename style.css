@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  /* background-image: url("./images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+  /* this is a good practice */
+  min-height: 100vh;
+}
+
+main.container {
+  /* background-img on container is beteer than body; */
+  background-image: url("./images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 1px;
+}
+
+form {
+  /* clamp = min, prefered, max */
+  width: clamp(15rem, 80vw, 45rem);
+  /* this way the width is responsive */
+  /* and use rem instead of px */
+  /* --- */
+  /* width: 30vw; */
+  /* dont set height unless you really need it */
+  /* height: 70vh; */
+  margin: 0 auto;
+  margin-top: 10vh;
+  background-color: #51123f7d;
+  /* padding-top: 80px; */
+  backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: inset 0px 0px 10px 10px #450f36;
+}
+
+.profile-pic-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.profile-pic {
+  width: 6rem;
+  height: 3rem;
+  /* border-radius: 50%; */
+  border-top-right-radius: 6rem;
+  border-top-left-radius: 6rem;
+  border-bottom: 0;
+  /* background-color: #51123f7d; */
+  box-shadow: inset 0px 0px 10px 10px #450f36;
+  /* backdrop-filter: blur(3.5px); */
+  /* margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -3rem;
+
+  /* border: 1px solid ; */
+  /* left: 40%; */
+}
+.fa-users {
+  align-self: flex-end;
+  color: white;
+  font-size: 3rem;
+  /* margin-top: 3rem; */
+  /* font-size: 50px;
+  margin-top: 50px; */
+}
+form h1 {
+  color: white;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+input:not([type="checkbox"]) {
+  font-family: "Font Awesome 5 Free", "Roboto";
+  font-weight: 700;
+  width: 80%;
+  height: 3rem;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 10px;
+  display: block;
+  border-radius: 1rem;
+  border: 2px solid#450f36;
+  background-color: transparent;
+  color: white;
+}
+input[type="password"] {
+  letter-spacing: 1ch;
+}
+::placeholder {
+  color: #ffffff;
+  letter-spacing: 5px;
+}
+.login-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.login-button a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #e875c8;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.login-button a:hover {
+  color: #9d237b;
+  background: #e875c8;
+  box-shadow: 0 0 10px #e875c8, 0 0 40px #e875c8, 0 0 80px #e875c8;
+  transition-delay: 1s;
+}
+
+.login-button a span {
+  position: absolute;
+  display: block;
+}
+
+.login-button a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e875c8);
+}
+.login-button a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.login-button a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #e875c8);
+}
+.login-button a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.login-button a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #e875c8);
+}
+.login-button a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.login-button a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #e875c8);
+}
+.login-button a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+.rememberme-forget {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.rememberme-forget a {
+  text-decoration: none;
+  color: white;
+}
+.rememberme-forget a:hover {
+  color: #e875c8;
+}
+.rememberme-forget label {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 9rem;
+}
+.rememberme-forget input[type="checkbox"] {
+  width: 1rem;
+  /* margin: 0; */
+  /* margin-right: 20px; */
+}
+
+.bottom-div {
+  display: flex;
+
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.inside {
+  width: 50px;
+  height: 50px;
+  background-color: #450f3652;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 10px 5px #9d237b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inside .fa {
+  color: #b63892;
+  font-size: 30px;
+  transition: all 0.35s ease-in-out;
+}
+
+.inside .fa:hover {
+  text-shadow: 0 0 10px #e875c8, 0 0 40px #e875c8, 0 0 80px #e875c8;
+  transform: scale(1.5);
+}
+.bottom-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.bottom-links a:hover {
+  color: #e875c8;
+}
+
+.new-acc a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.new-acc a:hover {
+  color: #e875c8;
+}
+.new-acc p {
+  margin: 1rem 0 0 1rem;
+  font-size: 0.8rem;
+  color: #b63892;
+}
