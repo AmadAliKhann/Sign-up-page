@@ -208,7 +208,7 @@ label a:hover {
 }
 
 .inside .fa:hover {
-  text-shadow: 0 0 10px #e875c8, 0 0 40px #e875c8, 0 0 80px #e875c8;
+  text-shadow: 0 0 10px #862d6d, 0 0 40px #e875c8, 0 0 80px #e875c8;
   transform: scale(1.5);
 }
 .bottom-links {
